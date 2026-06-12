@@ -1,0 +1,78 @@
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.85);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+.navbar a.active {
+    color: #00e0b8;
+    border-bottom: 3px solid #00e0b8;
+}
+
+.navbar a:hover {
+    color: white;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url("/static/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.75);
+    min-height: 100vh;
+    padding: 60px;
+    text-align: center;
+}
+
+.box {
+    background: rgba(255,255,255,0.12);
+    padding: 30px;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 20px;
+}
+
+button {
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    background: #00e0b8;
+    margin-top: 25px;
+}
+
+button:hover {
+    background: #02ffd1;
+}
+
+textarea, input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 15px;
+}
+
+.images img {
+    width: 220px;
+    margin: 15px;
+    border-radius: 15px;
+}

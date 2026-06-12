@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="overlay">
+    <h2>Select Input Method</h2>
+
+    <a href="/predict?type=text"><button>Manual Text Input</button></a>
+    <br><br>
+    <a href="/predict?type=url"><button>News URL</button></a>
+</div>
+</body>
+<div class="navbar">
+    <a href="/" class="{{ 'active' if page=='home' else '' }}">Home</a>
+    <a href="/about" class="{{ 'active' if page=='about' else '' }}">About</a>
+    <a href="/mode" class="{{ 'active' if page=='mode' else '' }}">Try</a>
+    <a class="{{ 'active' if page=='result' else '' }}">Result</a>
+</div>
+
+</html>

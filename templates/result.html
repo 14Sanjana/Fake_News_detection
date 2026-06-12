@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <a href="/" class="{{ 'active' if page=='home' else '' }}">Home</a>
+    <a href="/about" class="{{ 'active' if page=='about' else '' }}">About</a>
+    <a href="/mode" class="{{ 'active' if page=='mode' else '' }}">Try</a>
+    <a class="{{ 'active' if page=='result' else '' }}">Result</a>
+</div>
+
+<!-- Main Content -->
+<div class="overlay">
+    <h2>Prediction Result</h2>
+
+    <div class="box">
+
+        <!-- Language Info -->
+        {% if detected_lang != 'en' %}
+            <p><b>Detected Language:</b> {{ detected_lang | upper }}</p>
+
+            <p><b>Translated Text (English):</b></p>
+            <div class="translated-box">
+                {{ translated_text }}
+            </div>
+            <hr>
+        {% endif %}
+
+        <!-- Prediction -->
+        <h3 class="prediction">{{ prediction }}</h3>
+        <p class="confidence">Confidence: {{ confidence }}%</p>
+
+        <a href="/">
+            <button>Go Home</button>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>

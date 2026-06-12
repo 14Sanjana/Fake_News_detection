@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="overlay">
+    <h2>About the Project</h2>
+    <p>
+        This system enhances fake news detection by combining
+        CNN and Bi-LSTM models trained on WELFake and Indian
+        news datasets for better generalization.
+    </p>
+
+    <div class="images">
+        <img src="/static/fake1.jpg">
+        <img src="/static/fake2.jpg">
+        <img src="/static/fake3.jpg">
+    </div>
+
+    <a href="/mode"><button>Try It</button></a>
+</div>
+</body>
+<div class="navbar">
+    <a href="/" class="{{ 'active' if page=='home' else '' }}">Home</a>
+    <a href="/about" class="{{ 'active' if page=='about' else '' }}">About</a>
+    <a href="/mode" class="{{ 'active' if page=='mode' else '' }}">Try</a>
+    <a class="{{ 'active' if page=='result' else '' }}">Result</a>
+</div>
+
+</html>
